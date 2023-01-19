@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        all: unset;
+        background-color: orange;
+        padding: 5px 5px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+      }
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transition: all 1s;
+        opacity: 1;
+      }
+      .modal-overlay {
+        background-color: gray;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      .modal-content {
+        height: 100px;
+        background-color: #fff;
+        padding: 50px 50px;
+        text-align: center;
+        position: relative;
+        border-radius: 10px;
+      }
+      .open {
+        color: white;
+        position: absolute;
+        width: 100px;
+        height: 30px;
+        z-index: 100;
+        text-align: center;
+      }
+      .close {
+        position: relative;
+        left: 90px;
+      }
+      .hidden {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="open">open modal</button>
+    <div class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <h1>modal opened!</h1>
+        <button class="close">❌</button>
+      </div>
+    </div>
+
+    <script src="modal.js"></script>
+  </body>
+</html>
