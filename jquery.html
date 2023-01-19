@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <style>
+      .greeting {
+        padding: 20px;
+        background-color: orange;
+        text-align: center;
+      }
+      .btns {
+        display: flex;
+        justify-content: center;
+      }
+      .btn {
+        margin: 0 5px;
+      }
+      .greeting.activate {
+        font-size: xx-large;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="greeting">hello!</h1>
+    </div>
+
+    <div class="btns">
+      <button class="btn btn1">클래스 추가</button>
+      <button class="btn btn2">클래스 제거</button>
+      <button class="btn btn3">토글</button>
+      <button class="btn btn4">텍스트 변경</button>
+    </div>
+    <script>
+      $(".btn1").click(function () {
+        $(".greeting").addClass("activate");
+      });
+      $(".btn2").click(function () {
+        $(".greeting").removeClass("activate");
+      });
+      $(".btn3").click(function () {
+        $(".greeting").toggleClass("activate");
+      });
+      $(".btn4").click(function () {
+        $(".greeting").text("nice");
+      });
+    </script>
+  </body>
+</html>

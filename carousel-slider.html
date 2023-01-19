@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #slider {
+        position: relative;
+        width: 100%;
+      }
+      .slider-item {
+        width: 100%;
+        height: 500px;
+        background: orange;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+      .slider-item:nth-child(2) {
+        background: red;
+      }
+      .slider-item:nth-child(3) {
+        background: green;
+      }
+      .slider-item:nth-child(4) {
+        background: blue;
+      }
+      .slider-item:nth-child(5) {
+        background: purple;
+      }
+      .active {
+        z-index: 1;
+        opacity: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="slider">
+      <div class="slider-item">
+        <h1>1</h1>
+      </div>
+      <div class="slider-item">
+        <h1>2</h1>
+      </div>
+      <div class="slider-item">
+        <h1>3</h1>
+      </div>
+      <div class="slider-item">
+        <h1>4</h1>
+      </div>
+      <div class="slider-item">
+        <h1>5</h1>
+      </div>
+    </div>
+    <script src="slide.js"></script>
+  </body>
+</html>
